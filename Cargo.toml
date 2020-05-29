@@ -1,9 +1,18 @@
 [package]
 name = "fog-db"
-version = "0.1.0"
-authors = ["Scott Teal <scott@teals.org>"]
+version = "0.0.1"
+authors = ["Scott Teal"]
+readme = "README.md"
+repository = "https://github.com/Cognoscan/fog-db"
+homepage = "https://github.com/Cognoscan/fog-db"
 edition = "2018"
+description = "Embedded database built with rocksdb and fog-pack"
+license = "MIT OR Apache-2.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+fog-pack = "0.1"
+rocksdb = "0.12.2"
+crossbeam-utils = "0.6.5"
+crossbeam-channel = "0.3.8"
