@@ -5,12 +5,21 @@ authors = ["Scott Teal"]
 readme = "README.md"
 repository = "https://github.com/Cognoscan/fog-db"
 homepage = "https://github.com/Cognoscan/fog-db"
-edition = "2018"
+edition = "2021"
 description = "Embedded database built with rocksdb and fog-pack"
 license = "MIT OR Apache-2.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-fog-pack = "^0.1"
-futures-sink = "^0.3"
+#fog-pack = "0.2"
+fog-pack = { path = "../fog-pack/" }
+fog-crypto = "0.4"
+sled = { version = "0.34", features = ["default", "docs"] }
+serde = "1"
+tokio = { version = "1.16", features = ["rt", "sync", "time", "macros"] }
+parking_lot = "0.11.2"
+dynamic-lru-cache = "0.2"
+
+[dev-dependencies]
+rand = "0.7"
